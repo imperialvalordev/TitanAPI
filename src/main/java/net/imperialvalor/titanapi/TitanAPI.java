@@ -10,8 +10,9 @@ public final class TitanAPI extends Plugin {
 	public void onEnable() {
 		// Plugin startup logic
 		BungeeCommandManager manager = new BungeeCommandManager(this);
-
+		
 		manager.registerCommand(new TitanCommand());
+		getLogger().info("Successfully registered TitanAPI administration commands.");
 	}
 
 	@Override
