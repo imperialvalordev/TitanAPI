@@ -1,5 +1,7 @@
 name: Review Dog
 on:
+  push:
+  pull_request:
 jobs:
   secrets:
     name: Secret Detection
