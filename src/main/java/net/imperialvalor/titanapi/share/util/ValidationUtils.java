@@ -11,7 +11,7 @@ public class ValidationUtils {
 
 	/**
 	 * Check if string only contains whitelisted characters.
-	 * 
+	 *
 	 * @param input - the input string to validate
 	 * @return if the input does not contain invalid characters
 	 */
@@ -35,7 +35,7 @@ public class ValidationUtils {
 
 	/**
 	 * Validate if string only contains whitelisted characters and is not exceeding the maximal length for this input.
-	 * 
+	 *
 	 * @param input     - the input string to validate
 	 * @param maxLength - the maximum length of the input
 	 * @return if the input does not contain illegal characters or exceeds the maximum length
@@ -46,7 +46,7 @@ public class ValidationUtils {
 
 	/**
 	 * Validate decimal inputs.
-	 * 
+	 *
 	 * @param input - the decimal input to validate
 	 * @return if the input does not contain illegal characters
 	 */
@@ -69,12 +69,8 @@ public class ValidationUtils {
 		}
 
 		// Only either + or - allowed
-		if (plusCounter == 1 && minusCounter == 1) {
-			return false;
-		}
-
 		// Input has to start with a whitelisted char
-		if ((characterWhitelist + numberWhitelist).indexOf(input.charAt(0)) == -1) {
+		if ((plusCounter == 1 && minusCounter == 1) || ((characterWhitelist + numberWhitelist).indexOf(input.charAt(0)) == -1)) {
 			return false;
 		}
 
@@ -94,7 +90,7 @@ public class ValidationUtils {
 
 	/**
 	 * Validate integer input strings.
-	 * 
+	 *
 	 * @param input - the integer input to validate.
 	 * @return if the input does not contain illegal characters
 	 */
@@ -111,12 +107,8 @@ public class ValidationUtils {
 		long minusCounter = countChars(input, '-');
 
 		// Only one + and - allowed
-		if (plusCounter > 1 || minusCounter > 1) {
-			return false;
-		}
-
 		// Only either + or - allowed
-		if (plusCounter == 1 && minusCounter == 1) {
+		if (plusCounter > 1 || minusCounter > 1 || (plusCounter == 1 && minusCounter == 1)) {
 			return false;
 		}
 
@@ -142,7 +134,7 @@ public class ValidationUtils {
 
 	/**
 	 * Validate key input strings.
-	 * 
+	 *
 	 * @param input     - the key input to validate
 	 * @param maxLength - the maximum length of the input allowed
 	 * @return if the key does not contain or exceeds the maximum char length
@@ -167,7 +159,7 @@ public class ValidationUtils {
 
 	/**
 	 * Used to count occurrences of a characters in given string.
-	 * 
+	 *
 	 * @param input - the string to filter
 	 * @param c     - the character to count
 	 * @return the number of occurrences

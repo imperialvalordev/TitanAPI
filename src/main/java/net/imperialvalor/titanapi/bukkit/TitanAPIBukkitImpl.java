@@ -8,7 +8,7 @@ import net.imperialvalor.titanapi.TitanAPI;
 import net.imperialvalor.titanapi.share.MessageService;
 
 /**
- * 
+ *
  * @author Whitescan
  *
  */

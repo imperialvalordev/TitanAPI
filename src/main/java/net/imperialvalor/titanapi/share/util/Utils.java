@@ -4,12 +4,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * 
+ *
  * @author Whitescan
  *
  */
 public class Utils {
-	
 
 	/**
 	 * Used to join SharSequenzes with a range.
@@ -50,10 +49,10 @@ public class Utils {
 		}
 		return buf.toString();
 	}
-	
+
 	/**
 	 * Get all matching entries of a string list.
-	 * 
+	 *
 	 * @param list    - the input list
 	 * @param pattern - the input pattern
 	 * @return all entries that match the pattern

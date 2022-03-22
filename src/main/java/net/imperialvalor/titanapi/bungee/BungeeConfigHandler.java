@@ -1,4 +1,4 @@
-package net.imperialvalor.titanapi.bungee.config;
+package net.imperialvalor.titanapi.bungee;
 
 import java.io.File;
 import java.io.IOException;

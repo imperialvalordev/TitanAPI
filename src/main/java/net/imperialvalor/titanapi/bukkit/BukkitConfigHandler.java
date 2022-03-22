@@ -1,4 +1,4 @@
-package net.imperialvalor.titanapi.bukkit.config;
+package net.imperialvalor.titanapi.bukkit;
 
 import java.io.File;
 import java.io.IOException;

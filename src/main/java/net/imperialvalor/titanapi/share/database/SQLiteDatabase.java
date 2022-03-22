@@ -4,7 +4,7 @@ import java.sql.DriverManager;
 import java.util.logging.Logger;
 
 /**
- * 
+ *
  * @author Whitescan
  *
  */

@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.util.logging.Logger;
 
 /**
- * 
+ *
  * @author Whitescan
  *
  */
@@ -26,7 +26,7 @@ public abstract class AbstractDatabase {
 	}
 
 	protected abstract void connect();
-	
+
 	public void close() {
 
 		try {

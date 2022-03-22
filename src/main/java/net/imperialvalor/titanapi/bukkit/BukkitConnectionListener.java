@@ -9,7 +9,7 @@ import org.bukkit.event.player.AsyncPlayerPreLoginEvent.Result;
 import net.imperialvalor.titanapi.share.MessageService;
 
 /**
- * 
+ *
  * @author Whitescan
  *
  */

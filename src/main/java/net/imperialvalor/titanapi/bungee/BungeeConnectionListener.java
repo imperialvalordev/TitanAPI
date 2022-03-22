@@ -7,7 +7,7 @@ import net.md_5.bungee.event.EventHandler;
 import net.md_5.bungee.event.EventPriority;
 
 /**
- * 
+ *
  * @author Whitescan
  *
  */

@@ -5,7 +5,7 @@ import java.util.Properties;
 import java.util.logging.Logger;
 
 /**
- * 
+ *
  * @author Whitescan
  *
  */
