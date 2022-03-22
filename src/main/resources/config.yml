@@ -1,0 +1,29 @@
+# TitanAPI Configuration
+config:
+
+  # Database Configuration
+  database:
+  
+    # Define if MySQL should be used. Fallback to SQLite which is not recommended.
+    use-mysql: true
+    
+    # Hostname of the database
+    host: localhost
+    
+    # Port of the database
+    port: 3306
+    
+    # Name of the database
+    database: titanapi
+    
+    # Username of the database
+    username: root
+    
+    # Password of the database
+    password: ''
+    
+    # The prefix used for all database tables
+    table-prefix: 'server_'
+
+# leave this as it is
+setup: true
