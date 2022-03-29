@@ -19,7 +19,7 @@ import net.imperialvalor.titanapi.share.config.AbstractConfigHandler;
  */
 public abstract class BukkitConfigHandler extends AbstractConfigHandler {
 
-	private Plugin plugin;
+	protected Plugin plugin;
 
 	protected YamlConfiguration config;
 
@@ -87,10 +87,6 @@ public abstract class BukkitConfigHandler extends AbstractConfigHandler {
 
 		read();
 
-	}
-
-	public YamlConfiguration getConfig() {
-		return config;
 	}
 
 }

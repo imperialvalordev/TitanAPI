@@ -19,7 +19,7 @@ import net.md_5.bungee.config.YamlConfiguration;
  */
 public abstract class BungeeConfigHandler extends AbstractConfigHandler {
 
-	private Plugin plugin;
+	protected Plugin plugin;
 
 	protected Configuration config;
 
@@ -85,10 +85,6 @@ public abstract class BungeeConfigHandler extends AbstractConfigHandler {
 
 		read();
 
-	}
-
-	public Configuration getConfig() {
-		return config;
 	}
 
 }
