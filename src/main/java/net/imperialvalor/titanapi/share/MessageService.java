@@ -51,18 +51,6 @@ public class MessageService {
 			PROXY_PREFIX + "§4System Error\n\n§cThe server is currently unavailable!\n\n§aPlease contact the support!");
 
 	/**
-	 * Method used when displaying a syntax error message
-	 *
-	 * @param context - The help context
-	 * @return <TextComponent>
-	 */
-	public static TextComponent createSyntaxErrorMessage(String context) {
-		TextComponent textComponent = new TextComponent("§cWrong arguments, try §a" + context);
-		textComponent.setClickEvent(new ClickEvent(Action.SUGGEST_COMMAND, context));
-		return textComponent;
-	}
-
-	/**
 	 * Method used when displaying custom messages
 	 *
 	 * @param message - The message to create
@@ -71,6 +59,28 @@ public class MessageService {
 	public static TextComponent createMessage(String message) {
 		TextComponent textComponent = new TextComponent(PROXY_PREFIX + message);
 		return textComponent;
+	}
+
+	/**
+	 * Method used when displaying a syntax error message
+	 *
+	 * @param context - The help context
+	 * @return <TextComponent>
+	 */
+	public static TextComponent createSyntaxErrorMessage(String context) {
+		TextComponent textComponent = createMessage("§cWrong arguments, try §a" + context);
+		textComponent.setClickEvent(new ClickEvent(Action.SUGGEST_COMMAND, context));
+		return textComponent;
+	}
+
+	/**
+	 * Method used when displaying cooldown messages
+	 *
+	 * @param message - The message to create
+	 * @return <TextComponent>
+	 */
+	public static TextComponent createCooldownMessage(long cooldown) {
+		return createMessage("§cYou can't do that yet again. Wait §8" + cooldown + " second(s)§c.");
 	}
 
 }
