@@ -2,6 +2,8 @@ package net.imperialvalor.titanapi.share;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.UUID;
 
 /**
@@ -13,13 +15,18 @@ public class CooldownManager {
 
 	private final Map<UUID, Long> cooldowns = new HashMap<>();
 
-	public void setCooldown(UUID uniqueId, long time) {
+	public void setCooldown(UUID uniqueId, long seconds) {
 
-		if (time < 1) {
-			cooldowns.remove(uniqueId);
-		} else {
-			cooldowns.put(uniqueId, time);
-		}
+		cooldowns.put(uniqueId, seconds);
+
+		new Timer().schedule(new TimerTask() {
+
+			@Override
+			public void run() {
+				cooldowns.remove(uniqueId);
+			}
+
+		}, seconds * 1000);
 
 	}
 
