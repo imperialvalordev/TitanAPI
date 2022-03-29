@@ -80,7 +80,7 @@ public class MessageService {
 	 * @return <TextComponent>
 	 */
 	public static TextComponent createCooldownMessage(long cooldown) {
-		return createMessage("§cYou can't do that yet again. Wait §8" + cooldown + " second(s)§c.");
+		return createMessage("§cYou must wait §8" + cooldown + " second(s) §cbefore using that again.");
 	}
 
 }
