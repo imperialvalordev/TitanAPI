@@ -42,6 +42,8 @@ public class MojangUtil {
 			JsonElement root = JsonParser.parseReader(new InputStreamReader((InputStream) request.getContent()));
 			return getUniqueIdFromString(root.getAsJsonObject().get("id").getAsString());
 
+		} catch (NullPointerException e) {
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -71,6 +73,8 @@ public class MojangUtil {
 			JsonArray rootarray = root.getAsJsonArray().getAsJsonArray();
 			JsonElement element = rootarray.get(rootarray.size() - 1);
 			return element.getAsJsonObject().get("name").getAsString();
+
+		} catch (NullPointerException e) {
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -112,6 +116,8 @@ public class MojangUtil {
 			}
 
 			return history;
+
+		} catch (NullPointerException e) {
 
 		} catch (Exception e) {
 			e.printStackTrace();
