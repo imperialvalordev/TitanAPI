@@ -88,6 +88,7 @@ public class MojangUtil {
 	 * Used the Mojang API to retreive a complete Name History from the given UUID.
 	 * 
 	 * The result is sorted with an <TreeMap> by the time value the player changed his name.
+	 * The value will be 0 if it's the original name.
 	 * 
 	 * Make sure to cache results because to many requests to the Mojang API result in a block.
 	 * 
