@@ -13,7 +13,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 /**
- * 
+ *
  * @author Whitescan
  *
  */
@@ -25,9 +25,9 @@ public class MojangUtil {
 
 	/**
 	 * Use the Mojang API to grab the UUID of a username.
-	 * 
+	 *
 	 * Make sure to cache results because to many requests to the Mojang API result in a block.
-	 * 
+	 *
 	 * @param playerName
 	 * @return the uuid of the given player, may be null when the request does not return a valid response.
 	 */
@@ -54,9 +54,9 @@ public class MojangUtil {
 
 	/**
 	 * Use the Mojang API to grab the latest username of an unique id.
-	 * 
+	 *
 	 * Make sure to cache results because to many requests to the Mojang API result in a block.
-	 * 
+	 *
 	 * @param uniqueId
 	 * @return the latest username, may be null when the request does not return a valid response.
 	 */
@@ -86,12 +86,12 @@ public class MojangUtil {
 
 	/**
 	 * Used the Mojang API to retreive a complete Name History from the given UUID.
-	 * 
-	 * The result is sorted with an <TreeMap> by the time value the player changed his name.
-	 * The value will be 0 if it's the original name.
-	 * 
+	 *
+	 * The result is sorted with an <TreeMap> by the time value the player changed his name. The value will be 0 if it's the
+	 * original name.
+	 *
 	 * Make sure to cache results because to many requests to the Mojang API result in a block.
-	 * 
+	 *
 	 * @param uniqueId
 	 * @return the name history of a player, may be null when the request does not return a valid response.
 	 */
@@ -129,7 +129,7 @@ public class MojangUtil {
 
 	/**
 	 * Used to convert Strings to UUIDs since they may be stored without special characters.
-	 * 
+	 *
 	 * @param uniqueId
 	 * @return a correctly fromed UUID from the given string
 	 */

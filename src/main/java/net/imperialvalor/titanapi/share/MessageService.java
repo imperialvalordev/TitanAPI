@@ -12,7 +12,7 @@ import net.md_5.bungee.api.chat.TextComponent;
 public class MessageService {
 
 	/**
-	 * TODO Network Prefix
+	 * TODO TitanAPI Network Prefix
 	 */
 	private static final String PROXY_PREFIX = "§cIV §f§l» §e";
 
