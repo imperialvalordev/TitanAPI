@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import lombok.Getter;
 import net.imperialvalor.titanapi.TitanAPI;
 import net.imperialvalor.titanapi.share.MessageService;
 
@@ -16,6 +17,7 @@ public class TitanAPIBukkitImpl extends JavaPlugin implements TitanAPI {
 
 	// Setup
 
+	@Getter
 	private static TitanAPIBukkitImpl instance;
 
 	// Runtime
@@ -49,10 +51,6 @@ public class TitanAPIBukkitImpl extends JavaPlugin implements TitanAPI {
 			}
 		}
 
-	}
-
-	public static TitanAPIBukkitImpl getInstance() {
-		return instance;
 	}
 
 }

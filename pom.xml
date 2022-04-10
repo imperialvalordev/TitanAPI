@@ -17,13 +17,13 @@
 
 	<repositories>
 
-		<!-- BungeeCord API -->
+		<!-- Waterfall Repo -->
 		<repository>
-			<id>bungeecord-repo</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<id>papermc</id>
+			<url>https://papermc.io/repo/repository/maven-public/</url>
 		</repository>
 
-		<!-- Spigot API -->
+		<!-- Spigot Repo -->
 		<repository>
 			<id>spigot-repo</id>
 			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
@@ -35,29 +35,36 @@
 			<url>https://github.com/deanveloper/SkullCreator/raw/mvn-repo/</url>
 		</repository>
 
-		<!-- Sonatype Repo -->
-		<repository>
-			<id>sonatype</id>
-			<url>https://oss.sonatype.org/content/groups/public/</url>
-		</repository>
-
 	</repositories>
 
 	<dependencies>
 
-		<!-- BungeeCord API -->
+
+		<!-- Main Stack -->
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
-			<groupId>net.md-5</groupId>
-			<artifactId>bungeecord-api</artifactId>
-			<version>1.18-R0.1-SNAPSHOT</version>
-			<type>jar</type>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.22</version>
 			<scope>provided</scope>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 		<dependency>
-			<groupId>net.md-5</groupId>
-			<artifactId>bungeecord-api</artifactId>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.12.0</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Primary Stack -->
+
+		<!-- Waterfall API -->
+		<dependency>
+			<groupId>io.github.waterfallmc</groupId>
+			<artifactId>waterfall-api</artifactId>
 			<version>1.18-R0.1-SNAPSHOT</version>
-			<type>javadoc</type>
 			<scope>provided</scope>
 		</dependency>
 
@@ -69,6 +76,8 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- Dependency Stack -->
+
 		<!-- Skullcreator API -->
 		<dependency>
 			<groupId>dev.dbassett</groupId>
@@ -77,14 +86,16 @@
 			<scope>compile</scope>
 		</dependency>
 
+		<!-- Optional Stack -->
+
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.13.2</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
-
+		
 	</dependencies>
 
 	<build>

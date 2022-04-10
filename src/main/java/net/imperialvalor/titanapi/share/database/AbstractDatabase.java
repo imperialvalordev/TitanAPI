@@ -4,26 +4,29 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.logging.Logger;
 
+import lombok.Getter;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+
 /**
  *
  * @author Whitescan
  *
  */
+@RequiredArgsConstructor
 public abstract class AbstractDatabase {
 
+	@NonNull
 	protected Logger logger;
 
+	@NonNull
 	protected String database;
 
+	@Getter
+	@NonNull
 	protected String prefix;
 
 	protected Connection connection;
-
-	public AbstractDatabase(Logger logger, String database, String prefix) {
-		this.logger = logger;
-		this.database = database;
-		this.prefix = prefix;
-	}
 
 	protected abstract void connect();
 
@@ -55,10 +58,6 @@ public abstract class AbstractDatabase {
 		}
 
 		return connection;
-	}
-
-	public String getPrefix() {
-		return prefix;
 	}
 
 }

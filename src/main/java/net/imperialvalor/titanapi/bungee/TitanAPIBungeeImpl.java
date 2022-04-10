@@ -1,5 +1,6 @@
 package net.imperialvalor.titanapi.bungee;
 
+import lombok.Getter;
 import net.imperialvalor.titanapi.TitanAPI;
 import net.imperialvalor.titanapi.share.MessageService;
 import net.md_5.bungee.api.ProxyServer;
@@ -12,8 +13,10 @@ import net.md_5.bungee.api.plugin.Plugin;
  *
  */
 public class TitanAPIBungeeImpl extends Plugin implements TitanAPI {
+
 	// Setup
 
+	@Getter
 	private static TitanAPIBungeeImpl instance;
 
 	// Runtime
@@ -49,7 +52,4 @@ public class TitanAPIBungeeImpl extends Plugin implements TitanAPI {
 
 	}
 
-	public static TitanAPIBungeeImpl getInstance() {
-		return instance;
-	}
 }

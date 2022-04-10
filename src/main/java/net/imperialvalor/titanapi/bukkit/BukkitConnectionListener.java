@@ -6,6 +6,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
 import org.bukkit.event.player.AsyncPlayerPreLoginEvent.Result;
 
+import lombok.AllArgsConstructor;
 import net.imperialvalor.titanapi.share.MessageService;
 
 /**
@@ -13,13 +14,10 @@ import net.imperialvalor.titanapi.share.MessageService;
  * @author Whitescan
  *
  */
+@AllArgsConstructor
 public class BukkitConnectionListener implements Listener {
 
-	private TitanAPIBukkitImpl api;
-
-	public BukkitConnectionListener(TitanAPIBukkitImpl api) {
-		this.api = api;
-	}
+	private final TitanAPIBukkitImpl api;
 
 	@EventHandler(ignoreCancelled = true, priority = EventPriority.HIGHEST)
 	public void onPreLogin(AsyncPlayerPreLoginEvent e) {

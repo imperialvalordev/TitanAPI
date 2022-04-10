@@ -34,4 +34,8 @@ public class CooldownManager {
 		return cooldowns.getOrDefault(uniqueId, (long) 0);
 	}
 
+	public boolean hasCooldown(UUID uniqueId) {
+		return getCooldown(uniqueId) > 0;
+	}
+
 }

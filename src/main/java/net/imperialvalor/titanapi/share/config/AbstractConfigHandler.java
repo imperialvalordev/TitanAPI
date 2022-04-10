@@ -2,18 +2,17 @@ package net.imperialvalor.titanapi.share.config;
 
 import java.io.File;
 
+import lombok.AllArgsConstructor;
+
 /**
  *
  * @author Whitescan
  *
  */
+@AllArgsConstructor
 public abstract class AbstractConfigHandler {
 
 	protected File configFile;
-
-	public AbstractConfigHandler(File configFile) {
-		this.configFile = configFile;
-	}
 
 	public abstract void load();
 

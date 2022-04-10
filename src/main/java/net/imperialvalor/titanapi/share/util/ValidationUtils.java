@@ -21,7 +21,7 @@ public class ValidationUtils {
 			return false;
 		}
 
-		String whitelist = "[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789^!\\\"$%&/{}()[]=ßẞ?\\\\@€ü+*~öä#<>|,;.:-_ ]";
+		String whitelist = "[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789^!\\\"$%&/{}()[]=?\\\\@€+*~#<>|,;.:-_ ]";
 
 		for (char c : input.toCharArray()) {
 			if (whitelist.indexOf(c) == -1) {
