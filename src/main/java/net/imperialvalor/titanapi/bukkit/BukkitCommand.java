@@ -31,7 +31,7 @@ public abstract class BukkitCommand implements CommandExecutor, TabExecutor {
 			executeCommand(sender, label, args);
 
 		} else {
-			sender.spigot().sendMessage(MessageService.NO_PERMISSION_COMMAND);
+			sender.spigot().sendMessage(MessageService.NO_PERMISSION);
 		}
 
 		return true;
@@ -43,15 +43,15 @@ public abstract class BukkitCommand implements CommandExecutor, TabExecutor {
 	@Override
 	public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
 
-		if (sender instanceof Player && sender.hasPermission(getPermission())) {
-			return tabComplete(sender, label, args);
+		if (sender instanceof Player actor && hasPermission(sender)) {
+			return tabComplete(actor, label, args);
 		}
 
 		return new ArrayList<>();
 
 	}
 
-	protected abstract List<String> tabComplete(CommandSender sender, String label, String[] args);
+	protected abstract List<String> tabComplete(Player sender, String label, String[] args);
 
 	protected boolean hasPermission(CommandSender sender) {
 		return getPermission() == null || sender.hasPermission(getPermission());

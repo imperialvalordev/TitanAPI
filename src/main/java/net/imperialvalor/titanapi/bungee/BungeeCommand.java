@@ -26,7 +26,7 @@ public abstract class BungeeCommand extends Command implements TabExecutor {
 			executeCommand(sender, args);
 
 		} else {
-			sender.sendMessage(MessageService.NO_PERMISSION_COMMAND);
+			sender.sendMessage(MessageService.NO_PERMISSION);
 		}
 
 	}
@@ -36,14 +36,14 @@ public abstract class BungeeCommand extends Command implements TabExecutor {
 	@Override
 	public Iterable<String> onTabComplete(CommandSender sender, String[] args) {
 
-		if (sender instanceof ProxiedPlayer && sender.hasPermission(getPermission())) {
-			return tabComplete(sender, args);
+		if (sender instanceof ProxiedPlayer actor && hasPermission(sender)) {
+			return tabComplete(actor, args);
 		}
 
 		return new ArrayList<>();
 
 	}
 
-	protected abstract Iterable<String> tabComplete(CommandSender sender, String[] args);
+	protected abstract Iterable<String> tabComplete(ProxiedPlayer sender, String[] args);
 
 }
