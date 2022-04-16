@@ -75,7 +75,7 @@ public class MessageService {
 
 	/**
 	 * Translate HEX codes in chat components.
-	 * 
+	 *
 	 * @param input
 	 * @param formatColors - should format codes also be converted?
 	 * @return formatted string
