@@ -32,6 +32,10 @@ public class CooldownManager {
 		this.seconds = seconds;
 	}
 
+	public long getOriginalCooldown(UUID uniqueId) {
+		return cooldowns.getOrDefault(uniqueId, (long) 0);
+	}
+
 	/**
 	 * Get the cooldown of the provided uuid.
 	 *
@@ -39,7 +43,15 @@ public class CooldownManager {
 	 * @return the cooldown of the uuid or 0 if there is no cooldown
 	 */
 	public long getCooldown(UUID uniqueId) {
-		return cooldowns.getOrDefault(uniqueId, (long) 0);
+
+		long original = getOriginalCooldown(uniqueId);
+
+		if (original > 0) {
+			return System.currentTimeMillis() - original;
+		}
+
+		return 0;
+
 	}
 
 	/**
