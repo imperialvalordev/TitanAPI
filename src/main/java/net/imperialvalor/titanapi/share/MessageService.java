@@ -167,4 +167,11 @@ public class MessageService {
 		return createMessage(message, ClickEvent.Action.OPEN_URL, url, "§a§lClick here §eto open URL §c" + url);
 	}
 
+	public static TextComponent createPlainCommandTextComponent(String message, String command) {
+		TextComponent textComponent = new TextComponent(message);
+		textComponent.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, command));
+		textComponent.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new Text("§a§lClick here §eto run §c" +command)));
+		return textComponent;
+	}
+
 }
