@@ -85,7 +85,7 @@ public class MojangUtil {
 	}
 
 	/**
-	 * Used the Mojang API to retreive a complete Name History from the given UUID.
+	 * Used the Mojang API to retrieve a complete Name History from the given UUID.
 	 *
 	 * The result is sorted with an <TreeMap> by the time value the player changed his name. The value will be 0 if it's the
 	 * original name.
@@ -131,7 +131,7 @@ public class MojangUtil {
 	 * Used to convert Strings to UUIDs since they may be stored without special characters.
 	 *
 	 * @param uniqueId
-	 * @return a correctly fromed UUID from the given string
+	 * @return a correctly formed UUID from the given string
 	 */
 	public static UUID getUniqueIdFromString(String uniqueId) {
 		return UUID.fromString(uniqueId.replaceFirst("(\\w{8})(\\w{4})(\\w{4})(\\w{4})(\\w{12})", "$1-$2-$3-$4-$5"));

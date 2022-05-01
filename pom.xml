@@ -27,6 +27,12 @@
 			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
 		</repository>
 
+		<!-- Floodgate Repo -->
+		<repository>
+			<id>opencollab-snapshot</id>
+			<url>https://repo.opencollab.dev/maven-snapshots/</url>
+		</repository>
+
 		<!-- Skullcreator API -->
 		<repository>
 			<id>skullcreator-repo</id>
@@ -73,6 +79,14 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- Floodgate API -->
+		<dependency>
+			<groupId>org.geysermc.floodgate</groupId>
+			<artifactId>api</artifactId>
+			<version>2.0-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+
 		<!-- Dependency Stack -->
 
 		<!-- Skullcreator API -->
@@ -92,7 +106,7 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 	</dependencies>
 
 	<build>
